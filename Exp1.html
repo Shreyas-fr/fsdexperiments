@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="desgin.css">
+</head>
+
+<header class="header">
+    <div class="container nav">
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Message">Message</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+</header>
+
+<section id="About" class="section">
+    <h2>About Me</h2>
+    <div class="about-grid">
+
+        <p>I am a developer trying my first website on my own</p>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="Projects">
+        <div class="card">
+            <h3>My major project</h3>
+            <p>This is the fsae car we had made and the car was made in college</p>
+            <img src="Car photo.jpg" alt="Project">
+        </div>
+    </div>
+</section>
+
+<section id="Contact" class="section">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+        <label>Name</label>
+        <input type="text" placeholder="Your Name" required>
+        <label>Email</label>
+        <input type="email" placeholder="Your Email" required>
+        <label>Message</label>
+    </form>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
