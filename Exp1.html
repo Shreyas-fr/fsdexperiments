@@ -2,54 +2,132 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="desgin.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shpoyu — Simple E-commerce</title>
+    
+    <link rel="stylesheet" href="desgin.css" />
 </head>
 
-<header class="header">
-    <div class="container nav">
-        <div class="logo">MyPortfolio</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#About">About</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
-            <li><a href="#Message">Message</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
-</header>
-
-<section id="About" class="section">
-    <h2>About Me</h2>
-    <div class="about-grid">
-
-        <p>I am a developer trying my first website on my own</p>
-    </div>
-</section>
-
-<section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="Projects">
-        <div class="card">
-            <h3>My major project</h3>
-            <p>This is the fsae car we had made and the car was made in college</p>
-            <img src="Car photo.jpg" alt="Project">
+<body>
+   
+    <header class="header">
+        <div class="container header-row">
+            <div class="logo">shpoyu</div>
+            <nav class="main-nav">
+                <a href="#">Home</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+                <button id="cartBtn" class="cart-btn">Cart (0)</button>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
+   
+    <marquee style="background:#fff;color:#000;padding:8px;margin-top:6px;">Welcome to shpoyu! Best deals!!!</marquee>
 
-<section id="Contact" class="section">
-    <h2>Contact Me</h2>
-    <form class="contact-form">
-        <label>Name</label>
-        <input type="text" placeholder="Your Name" required>
-        <label>Email</label>
-        <input type="email" placeholder="Your Email" required>
-        <label>Message</label>
-    </form>
-</section>
+    <section class="hero">
+        <div class="container">
+            <center>
+                <h2 style="font-size:24px;">Welcome to shpoyu</h2>
+                <p style="font-style:italic;">My first site</p>
+                <input id="search" class="search" type="text" placeholder="Search products..."
+                    style="border:3px solid #000; padding:8px;" />
+            </center>
+        </div>
+    </section>
 
-<footer class="footer">
-    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    <section id="products" class="products container">
+        <h3>Featured Products</h3>
+        <div class="grid">
+            <div class="card" style="border:4px dotted red;">
+                <img src="https://via.placeholder.com/320x180?text=Red+T-shirt" alt="Red T-shirt" style="width:95%;" />
+                <h4 style="color: red;">Red T-shirt</h4>
+                <p class="price">$19.99</p>
+                <button class="buy" style="background: yellow; color: black; border:2px solid red;">Buy Now!</button>
+            </div>
+
+            <div class="card" style="border:3px solid blue;">
+                <img src="https://via.placeholder.com/300x200?text=Blue+Jeans" alt="Blue Jeans" style="width:80%;" />
+                <h4 style="color:blue;">Blue Jeans</h4>
+                <p class="price">$39.99</p>
+                <button class="buy" style="background: lightgreen; color:black;">Add to Cart</button>
+            </div>
+
+            <div class="card" style="border-left:6px solid orange;">
+                <img src="https://via.placeholder.com/310x190?text=Sneakers" alt="Sneakers" style="width:90%;" />
+                <h4 style="color:orange; text-align:center;">Sport Sneakers</h4>
+                <p class="price">$59.99</p>
+                <button class="buy" style="background: orange; color:white;">Add to Cart</button>
+            </div>
+
+            <div class="card" style="border-top:4px dashed purple;">
+                <img src="https://via.placeholder.com/300x200?text=Backpack" alt="Backpack" style="width:85%;" />
+                <h4 style="color:purple;">Travel Backpack</h4>
+                <p class="price">$29.99</p>
+                <button class="buy" style="background: pink; color:black;">Add to Cart</button>
+            </div>
+        </div>
+
+        <br />
+        <hr style="border:2px solid #000;" />
+       
+        <table style="width:100%; border-collapse: collapse; margin-top:12px;">
+            <tr>
+                <th style="border:2px solid #000; padding:8px;">Item</th>
+                <th style="border:2px solid #000; padding:8px;">Price</th>
+            </tr>
+            <tr>
+                <td style="border:1px solid #000; padding:6px;">Red T-shirt</td>
+                <td style="border:1px solid #000; padding:6px;">$19.99</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #000; padding:6px;">Blue Jeans</td>
+                <td style="border:1px solid #000; padding:6px;">$39.99</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section id="contact" class="contact container">
+        <h3>Contact</h3>
+        <p>If you want to reach out, just pretend to fill this form — it's a demo.</p>
+        <form class="contact-form">
+            <label>Name</label>
+            <input type="text" placeholder="Your Name" />
+            <label>Email</label>
+            <input type="email" placeholder="Your Email" />
+            <label>Message</label>
+            <textarea placeholder="Write something..."></textarea>
+            <button type="button">Send (demo)</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-row">
+            <p>© 2026 shpoyu. A tiny demo e-commerce site.</p>
+            <p style="font-size:14px; margin-top:6px;">Made by a first-time coder ✦</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var cartCount = 0;
+            var cartBtn = document.getElementById('cartBtn');
+            var buyButtons = document.querySelectorAll('.buy');
+
+            function updateCart() {
+                cartBtn.textContent = 'Cart (' + cartCount + ')';
+            }
+
+            buyButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    cartCount = cartCount + 1;
+                    updateCart();
+                    alert('Added to cart! Cart now has ' + cartCount + ' item(s).');
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

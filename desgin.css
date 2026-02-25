@@ -2,140 +2,180 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+/* Intentionally simple, 'first-time coder' look */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* light paper-like background to look handmade */
+    background: #fff8e1;
+    color: #111;
+    font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
+    line-height: 1.4;
+}
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
-img {
-    width: 300px;
-    height: auto;
-}
-
-
+/* Header: big, centered and a little uneven */
 .header {
-    background-color: #070707;
-    color: white;
-    padding: 0 20px;
+    background: #ffb3b3;
+    /* simple pink */
+    padding: 14px 0;
+    border-bottom: 3px solid #000;
+    /* obvious border like a beginner might add */
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+.header-row {
+    text-align: center;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 34px;
+    font-weight: 700;
 }
 
-.navlinks {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.main-nav {
+    margin-top: 8px;
 }
 
-.nav-links a {
-    color: white;
+.main-nav a {
+    color: #000;
     text-decoration: none;
-    font-size: 18px;
+    margin: 0 8px;
+    font-size: 16px;
 }
 
-.nav-links a:hover {
-    color: #38bdf8;
-}
-
-.hamburger {
-    display: none;
-    font-size: 1.8rem;
+.cart-btn {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 6px 10px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
+/* Hero area: simple box */
+.hero {
+    background: #fff;
+    border: 2px dashed #000;
+    /* dashed border for a handmade feel */
+    padding: 12px;
+    margin: 12px 0;
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 10fx;
+.hero h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
 }
 
-.about-grid img {
-    width: 10%;
-    border-radius: 20px;
+.search {
+    padding: 6px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 300px;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.contact-form {
+/* Products: use simple two-column layout for clarity */
+.grid {
     display: flex;
-    flex-direction: coloumn;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card {
+    background: #fff;
+    border: 2px solid #000;
+    /* obvious border */
+    padding: 10px;
+    width: calc(50% - 12px);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.card h4 {
+    margin: 6px 0;
+    font-size: 18px;
+}
+
+.price {
+    color: #000;
+    font-weight: 700;
+}
+
+.buy {
+    background: #b3ffd9;
+    color: #000;
+    border: 2px solid #000;
+    padding: 6px 8px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* Contact form: plain and simple */
+.contact-form {
+    display: block;
+    margin-top: 8px;
 }
 
 input,
 textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid #000;
+    display: block;
+    width: 100%;
+    margin: 6px 0 12px 0;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #070707;
-    color: white;
+button[type="button"] {
+    background: #fff;
+    border: 2px solid #000;
+    padding: 6px 10px;
     cursor: pointer;
 }
 
-button:hover {
-    background: #1e293b;
-}
-
+/* Footer: add 'Made by a first-time coder' text */
 .footer {
-    background: #0f172a;
-    color: white;
+    margin-top: 16px;
+    padding: 10px 0;
     text-align: center;
-    padding: 20px;
+    border-top: 2px solid #000;
+    background: #fff8e1;
 }
 
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
+/* Small screens: cards should be full width */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
     }
 
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 60px;
-        background: #0f172a;
-        flex-direction: column;
-        padding: 20px;
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
+    .logo {
+        font-size: 26px;
     }
 }
